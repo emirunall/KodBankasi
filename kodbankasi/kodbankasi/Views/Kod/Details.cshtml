@@ -1,0 +1,21 @@
+﻿@using kodbankasi.Dto;
+@model KodDto
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!-- Earnings (Annual) Card Example -->
+<div class="col-xl-12 col-md-12 mb-4">
+    <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+                <h1 class="text-center">@Model.Name</h1>
+                <hr />
+                <small> @Model.KategoriName</small>
+                <br />
+                <br />
+            <div class="row"><h4> @Html.Raw(@Model.Description)</h4></div>
+                </div>
+                </div>
+            </div>

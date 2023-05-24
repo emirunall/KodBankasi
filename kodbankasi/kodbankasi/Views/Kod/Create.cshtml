@@ -1,0 +1,38 @@
+﻿@model Kod
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container-fluid">
+    <!-- Basic Card Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Kod Ekle</h6>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" method="post"> 
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Kategori</label>
+                    @Html.DropDownListFor(model => model.kategoriId,
+                    ViewBag.kategoriView as SelectList,
+                        "-- Lütfen Kategorinizi Seçiniz --",
+                        new { @class = "form-control ",
+                        @id = "kategori",
+                        @placeholder = "Kategorinizi Seçiniz",
+                        required = "required"})              
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Kod Başlığı</label>
+                    <input asp-for="name" type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea">Kod</label>
+                    <textarea asp-for="description" class="form-control" id="exampleTextarea" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Ekle</button>
+            </form>
+
+        </div>
+    </div>
+</div>
